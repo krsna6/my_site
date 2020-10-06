@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.container-img {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container-img img {vertical-align: middle;}
+
+.container-img .content-img {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.7); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+

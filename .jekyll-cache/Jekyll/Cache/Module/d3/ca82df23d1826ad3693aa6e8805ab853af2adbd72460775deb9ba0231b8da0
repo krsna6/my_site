@@ -1,0 +1,59 @@
+I"ž
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article
+  class="project-card"
+  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/multiview/#project"
+  >
+  <meta property="name" content="Generalized Multiview Representation Learning"/>
+  <meta property="image" content="/assets/img/projects/multiview.svg"/>
+
+  <a href="/projects/multiview/" class="no-hover no-print-link flip-project" tabindex="-1">
+    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">
+      
+        
+
+
+<img
+  
+    src="/assets/img/projects/multiview.svg"
+  
+  alt="Generalized Multiview Representation Learning"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+      
+    </div>
+  </a>
+  <h3 class="project-card-title flip-project-title">
+    <a href="/projects/multiview/" class="flip-title" property="mainEntityOfPage">Generalized Multiview Representation Learning</a>
+  </h3>
+  
+    <p class="project-card-text fine" property="disambiguatingDescription">
+      Scalable multiview learning
+
+    </p>
+  
+  
+  <a class="fill-card no-hover" href="/projects/multiview/" tabindex="-1"><span class="sr-only">Continue reading Generalized Multiview Representation Learning
+</span></a>
+</article>
+:ET

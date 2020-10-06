@@ -1,0 +1,61 @@
+I"�
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article
+  class="project-card"
+  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/face/#project"
+  >
+  <meta property="name" content="Robust multiview face clustering"/>
+  <meta property="image" content="/assets/img/projects/faces.svg"/>
+
+  <a href="/projects/face/" class="no-hover no-print-link flip-project" tabindex="-1">
+    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">
+      
+        
+
+
+<img
+  
+    src="/assets/img/projects/faces.svg"
+    
+    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"
+  
+  alt="Robust multiview face clustering"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+      
+    </div>
+  </a>
+  <h3 class="project-card-title flip-project-title">
+    <a href="/projects/face/" class="flip-title" property="mainEntityOfPage">Robust multiview face clustering</a>
+  </h3>
+  
+    <p class="project-card-text fine" property="disambiguatingDescription">
+      Solving “who appears where” in movies.
+
+    </p>
+  
+  
+  <a class="fill-card no-hover" href="/projects/face/" tabindex="-1"><span class="sr-only">Continue reading Robust multiview face clustering
+</span></a>
+</article>
+:ET

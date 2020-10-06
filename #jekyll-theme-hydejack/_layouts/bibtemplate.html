@@ -1,0 +1,58 @@
+
+<div class="text-justify">
+{{reference | replace_first: 'Somandepalli, K.', '<b>Somandepalli, K.</b>' | replace_first: 'Somandepalli*, K.', '<b>Somandepalli*, K.</b>' | replace_first: 'Somandepalli, K.', '<b>Somandepalli, K.</b>', | replace_first: 'Somandepalli, K.', '<b>Somandepalli, K.</b>' | replace_first: 'Somandepalli*, K.', '<b>Somandepalli*, K.</b>'}}
+</div>
+
+<button class="button0" onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
+{% if entry.doi %}
+<a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input type='button' class='button1' value='doi'/></a>
+{% endif %}
+{% if entry.preprint %}
+<a href="{{ entry.preprint }}"><input type='button' class='button2' value='preprint'/></a>
+{% endif %}
+{% if entry.link %}
+<a href="{{ entry.link }}"><input type='button' class='button4' value='link'/></a>
+{% endif %}
+{% if entry.code %}
+<a href="{{ entry.code }}"><input type='button' class='button3' value='code'/></a>
+{% endif %}
+<!--{% if entry.pubtype %}
+<input type='button' class='button5' value="{{ entry.pubtype }}"/>
+{% endif %}-->
+
+<div id="a{{entry.key}}" style="display:none"><pre>{{entry.bibtex}}</pre></div>
+
+<script>
+function toggleBibtex{{entry.key}}(parameter) {
+    var x= document.getElementById('a{{entry.key}}');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+
+<!--<div id="{{key}}-materials">
+  <ul class="nav nav-pills">
+    {% if entry.abstract %}
+    <li><a data-toggle="collapse" href="#{{key}}-abstract">Abstract</a></li>
+    {% endif %}
+
+    <li><a data-toggle="collapse" href="javascript:toggleDiv('{{key}}-bibtex')">BibTeX</a></li>
+    <div id="{{key}}-bibtex" style="display:none;">
+    <pre class="collapse">{{entry.bibtex}}</pre>
+    </div>
+
+    {% if link %}
+    <li><a href="{{link}}">Download</a></li>
+    {% endif %}
+    {% if entry.doi %}
+    <li>DOI: <a href="http://dx.doi.org/{{entry.doi}}">{{entry.doi}}</a></li>
+    {% endif %}
+  </ul>
+
+  {% if entry.abstract %}
+  <p id="{{key}}-abstract" class="collapse">{{entry.abstract}}</p>
+  {% endif %}
+</div>-->

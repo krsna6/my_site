@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.0.4 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Generalized Multiview Representation Learning | Krishna Somandepalli</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Generalized Multiview Representation Learning" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="This is a central contrbution of my PhD dissertation." />
+<meta property="og:description" content="This is a central contrbution of my PhD dissertation." />
+<link rel="canonical" href="http://localhost:4000/projects/multiview/" />
+<meta property="og:url" content="http://localhost:4000/projects/multiview/" />
+<meta property="og:site_name" content="Krishna Somandepalli" />
+<meta property="og:image" content="http://localhost:4000/assets/img/projects/multiview.svg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-01T00:00:00-08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/projects/multiview.svg" />
+<meta property="twitter:title" content="Generalized Multiview Representation Learning" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/projects/multiview/","dateModified":"2020-10-01T12:06:14-07:00","datePublished":"2020-01-01T00:00:00-08:00","image":"http://localhost:4000/assets/img/projects/multiview.svg","headline":"Generalized Multiview Representation Learning","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/krsna_logo.png"}},"description":"This is a central contrbution of my PhD dissertation.","@type":"WebPage","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="machine-learning,multiview,multimodal,media intelligence">
+  
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Krishna Somandepalli">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Krishna Somandepalli">
+
+
+  <meta name="theme-color" content="rgb(8,46,57)">
+
+
+<meta name="generator" content="Hydejack v9.0.4" />
+
+
+<link rel="alternate" href="http://localhost:4000/blog/example/2012-02-07-example-content/" hreflang="en">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Krishna Somandepalli" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+<link rel="dns-prefetch" href="/assets/js/search-worker-9.0.4.js" as="worker" id="_hrefSearch">
+
+
+
+
+
+<script>!function(e,t){"use strict";function n(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,o){var r=t.createElement("script");r.src=e,o&&n(r,"load",o,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(r,a),r},e._loaded=!1,e.loadJSDeferred=function(o,r){function a(){e._loaded=!0,r&&n(c,"load",r,{once:!0});var o=t.scripts[0];o.parentNode.insertBefore(c,o)}var c=t.createElement("script");return c.src=o,e._loaded?a():n(e,"load",a,{once:!0}),c},e.setRel=e.setRelStylesheet=function(e){function o(){this.rel="stylesheet"}n(t.getElementById(e),"load",o,{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+}(window);
+</script>
+
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.0.4.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: #4fb1ba;--accent-color-faded: rgba(79,177,186,0.5);--accent-color-darkened: #409ba3;--theme-color: #193747;--dark-mode-body-bg: #282e31;--dark-mode-border-color: #343b3f}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  !function(e,s){var a="light-mode",d="dark-mode",o=(new Date).getHours();if(!("matchMedia"in e&&e.matchMedia("(prefers-color-scheme)"))){var i=o<=e._sunrise||o>=e._sunset?d:a,t=i===d?a:d;s.body.classList.add(i),s.body.classList.remove(t)}}(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-project"
+  role="main"
+>
+  
+
+
+
+
+
+<article
+  id="project"
+  class="page"
+  role="article"
+  vocab="http://schema.org/" typeof="CreativeWork" resource="#project"
+  >
+  <header>
+    <h1 class="page-title" property="name">Generalized Multiview Representation Learning</h1>
+
+    <p class="post-date heading">
+
+      
+
+      
+        <a href="/projects/" class="flip-title" property="genre">Projects</a>
+      
+
+      
+        |
+        <time datetime="2020-01-01T00:00:00-08:00">2020</time>
+        
+      
+
+      <span class="fr">
+        <span class="sr-only">| Links:</span>
+        
+          <a class="external" href="https://github.com/usc-sail/gen-dmcca" property="sameAs">code</a>
+          |
+        
+          <a class="external" href="https://www.isca-speech.org/archive/Interspeech_2019/pdfs/3130.pdf" property="sameAs">speech application</a>
+          |
+        
+          <a class="external" href="https://arxiv.org/abs/2005.06038" property="sameAs">theoretical guarantees</a>
+          
+        
+      </span>
+    </p>
+
+    
+    <div class="lead aspect-ratio sixteen-nine">
+      
+        
+
+
+<img
+  
+    src="/assets/img/projects/multiview.svg"
+  
+  alt="Generalized Multiview Representation Learning"
+  
+  property="image"
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+      
+    </div>
+
+    
+
+
+
+  
+    
+  
+
+
+    <meta property="disambiguatingDescription" content="Scalable multiview learning"/>
+  </header>
+
+  <details><summary><b>What are multiple views and modalities?</b></summary>Data that is sampled from observing an event with different instruments to capture its various presentations. For example, consider the task of identifying the wake word(s) "OK Google" or "Alexa" regardless of age, accent, acoustic background and other factors, different variations of a given wake word are multiple views of the underlying task, i.e., recognizing the wake word. Another example is understanding the topic of a video using sound design, visuals and language as multiple modalities.</details>
+<p></p>
+
+<details><summary><b>Why do multiview learning?</b></summary>
+<img src="/assets/img/why_multiview_learning.svg" alt="why do multiview learning" />
+<p></p>
+So can machines. Learning from different devices or instruments observing multiple aspects of an underlying event can help build robust machine learning models.
+</details>
+
+<blockquote>
+  <p><strong>Open research questions addressed by this work:</strong></p>
+  <ul>
+    <li>How can we model multiple views/modalities in parallel?
+      <ul>
+        <li>There is a need to develop methods that scale for a large number (&gt;2) of views.</li>
+        <li>Need for view-agnostic methods i.e., having view-correspondence but not details of view acquistion</li>
+      </ul>
+    </li>
+    <li>Developing mechanisms for multimodal “disentanglement”
+      <ul>
+        <li>How to disocciate modality-specific information and shared information across modalities?</li>
+        <li>Need for generalizable unsupervised and self-supervised methodologies.</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>Central idea of this work:</strong></p>
+  <ul>
+    <li>Inherent variability of a semantic class can be uncorrelated across multiple views in the data</li>
+    <li>Maximizing multiview correlation can transform input high-dim. data streams to low-dim. shared subspace across views</li>
+    <li>The subspaces estimated by factoring out the variabilities arising from the many views of an event are naturally discriminative of the classes</li>
+  </ul>
+</blockquote>
+
+<p>We evaluated our methodology on several datasets in the domains of audio, video and images. Below are three demos of such applications:</p>
+
+<p><strong>Click on the panels below to explore the learnt embeddings on different datasets</strong></p>
+
+<div class="container-img">
+  <a href="https://sail.usc.edu/~somandep/maps/command_id.html">
+  <img src="/assets/img/mvcorr_commands.svg" alt="Notebook" style="filter: blur(3px); width:50%;" />
+  <div class="content-img">
+    <h1>Wake word classification</h1>
+    <p>
+From the speech commands dataset, our method learns to discriminate the 30 commands no matter who the speaker is in an semi-supervised manner.
+</p>
+  </div>
+  </a>
+</div>
+<p></p>
+<div class="container-img">
+  <a href="https://sail.usc.edu/~somandep/maps/speaker_id.html">
+  <img src="/assets/img/mvcorr_speakers.svg" alt="Notebook" style="filter: blur(3px); width:50%;" />
+  <div class="content-img">
+    <h1>Text-dependent speaker ID</h1>
+    <p>
+From the speech commands dataset, our method learns to cluster the speakers no matter which of the 30 commands they spoke.
+</p>
+  </div>
+  </a>
+</div>
+<p></p>
+<div class="container-img">
+  <a href="https://sail.usc.edu/~somandep/maps/dcase_2018_mvcorr.html">
+  <img src="/assets/img/mvcorr_dcase.svg" alt="Notebook" style="filter: blur(3px); width:50%;" />
+  <div class="content-img">
+    <h1>Domestic activity classification</h1>
+    <p>
+Learn to model multi-channel audio segments acquired by a microphone array in a house. The multiview shared subspace can robustly disentangle channel from class information to classify domestic activities such as cooking, cleaning.
+</p>
+  </div>
+  </a>
+</div>
+<p></p>
+
+<div class="container-img">
+  <a href="https://sail.usc.edu/~somandep/maps/mvcnn.html">
+  <img src="/assets/img/mvcorr_mvcnn.svg" alt="Notebook" style="filter: blur(3px); width:50%;" />
+  <div class="content-img">
+    <h1>Multiview object recognition</h1>
+    <p>
+Embeddings learnt from multiple views of an object: Successfully classify 40 object categories imaged from 12 and 40 different views.
+</p>
+  </div>
+  </a>
+</div>
+
+<p>The visualizations above are developed using this <a href="https://github.com/krsna6/interactive-tsne">tool</a></p>
+
+<blockquote>
+  <p><strong>Why does this work?</strong><br />
+The objective we maximize and the evolution of the eigenvalues in the objective through the training process is illustrated below:<br />
+<img src="/assets/img/projects/mvcorr_loss.svg" alt="" /></p>
+</blockquote>
+
+</article>
+
+<hr class="dingbat related" />
+
+<!--
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="https://placehold.it/128x128"
+    srcset="https://placehold.it/128x128 1x,https://placehold.it/256x256 2x"
+    
+  
+  alt="Krishna Somandepalli"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/krishna-somandepalli-38827912" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/krsna6" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://scholar.google.com/citations?hl=en&user=rvBdf6wAAAAJ" title="GoogleScholar" class="no-mark-external">
+      <span class="icon-googlescholar1"></span>
+      <span class="sr-only">GoogleScholar</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:krishna.somandepalli@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+
+
+  
+
+  
+    
+
+
+  <aside class="other-projects related mb4" role="complementary">  <h2>Other Projects</h2>  <div class="columns">              <div class="column column-1-2">        <article  class="project-card"  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/face/#project"  >  <meta property="name" content="Robust multiview face clustering"/>  <meta property="image" content="/assets/img/projects/faces.svg"/>  <a href="/projects/face/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/projects/faces.svg"        sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="Robust multiview face clustering"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/projects/face/" class="flip-title" property="mainEntityOfPage">Robust multiview face clustering</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      Solving “who appears where” in movies.    </p>      <a class="fill-card no-hover" href="/projects/face/" tabindex="-1"><span class="sr-only">Continue reading Robust multiview face clustering</span></a></article>      </div>                  <div class="column column-1-2">        <article  class="project-card"  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/crossmodal/#project"  >  <meta property="name" content="Crossmodal Autoencoders for Ads"/>  <meta property="image" content="/assets/img/projects/ads.svg"/>  <a href="/projects/crossmodal/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/projects/ads.svg"        sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="Crossmodal Autoencoders for Ads"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/projects/crossmodal/" class="flip-title" property="mainEntityOfPage">Crossmodal Autoencoders for Ads</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      Self-supervised representation learning.    </p>      <a class="fill-card no-hover" href="/projects/crossmodal/" tabindex="-1"><span class="sr-only">Continue reading Crossmodal Autoencoders for Ads</span></a></article>      </div>      </div></aside>
+
+  
+
+  
+    
+
+  
+
+-->
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2020. All rights reserved. Krishna Somandepalli
+</small></p>
+  
+  
+  
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg " style="background:#193747"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/krsna_logo.png" class="avatar" alt="Krishna Somandepalli" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Krishna Somandepalli</h2></a>
+    
+    
+      <p class="">
+        PhD Candidate in Electrical &amp; Computer Engineering, USC
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/cv/"
+          class="sidebar-nav-item"
+          
+        >
+          CV
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/projects/"
+          class="sidebar-nav-item"
+          
+        >
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/publications/"
+          class="sidebar-nav-item"
+          
+        >
+          Publications
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/krishna-somandepalli-38827912" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/krsna6" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://scholar.google.com/citations?hl=en&user=rvBdf6wAAAAJ" title="GoogleScholar" class="no-mark-external">
+      <span class="icon-googlescholar1"></span>
+      <span class="sr-only">GoogleScholar</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:krishna.somandepalli@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}();
+</script>
+  <script src="/assets/js/hydejack-9.0.4.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.0.4.js" nomodule defer></script>
+  
+
+  
+
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      /**/
+      navigator.serviceWorker.getRegistration()
+        .then(r => r.unregister())
+        .catch(() => {});
+      /**/
+    }
+  </script>
+<!--<![endif]-->
+  <!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_forward-template">
+  <button id="_forward" class="forward nav-btn no-hover">
+    <span class="sr-only">Forward</span>
+    <span class="icon-arrow-right2"></span>
+  </button>
+</template>
+
+  <template id="_back-template">
+  <button id="_back" class="back nav-btn no-hover">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </button>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+    <template id="_cookies-banner-template">
+  <div id="_cookies-banner" class="navbar fixed-bottom CookiesOK">
+    <div class="content">
+      <div class="nav-btn-bar">
+        <small class="faded">
+          <span>This site uses cookies. <a href="/cookies-policy/">Cookies Policy</a>.
+</span>
+          <button id="_cookies-ok" class="btn btn-primary btn-sm">Okay</button>
+        </small>
+      </div>
+    </div>
+  </div>
+</template>
+
+  
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+  
+    <template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">Search</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input 
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="SEARCH NOT ENABLED DURING DEVELOPMENT"
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">Close</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>
+
+  
+</div>
+
+</body>
+</html>

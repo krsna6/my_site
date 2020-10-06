@@ -1,0 +1,61 @@
+I">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<article
+  class="project-card"
+  vocab="http://schema.org/" typeof="CreativeWork" resource="/projects/animated/#project"
+  >
+  <meta property="name" content="Unsupervised discovery of characters in animated movies"/>
+  <meta property="image" content="/assets/img/projects/animated_2.svg"/>
+
+  <a href="/projects/animated/" class="no-hover no-print-link flip-project" tabindex="-1">
+    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">
+      
+        
+
+
+<img
+  
+    src="/assets/img/projects/animated_2.svg"
+    
+    sizes="(min-width:86em)56rem,(min-width:54em)50rem,(min-width:42em)44rem,42rem"
+  
+  alt="Unsupervised discovery of characters in animated movies"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+      
+    </div>
+  </a>
+  <h3 class="project-card-title flip-project-title">
+    <a href="/projects/animated/" class="flip-title" property="mainEntityOfPage">Unsupervised discovery of characters in animated movies</a>
+  </h3>
+  
+    <p class="project-card-text fine" property="disambiguatingDescription">
+      Extracting model sheets for animated content, Automatically.
+
+    </p>
+  
+  
+  <a class="fill-card no-hover" href="/projects/animated/" tabindex="-1"><span class="sr-only">Continue reading Unsupervised discovery of characters in animated movies
+</span></a>
+</article>
+:ET

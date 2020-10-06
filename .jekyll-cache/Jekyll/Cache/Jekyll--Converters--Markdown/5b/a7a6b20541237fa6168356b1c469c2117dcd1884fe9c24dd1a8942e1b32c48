@@ -1,0 +1,141 @@
+I"�<blockquote>
+  <p><strong>Dimensional affect representation</strong><br />
+While there are different ways of measuring affect dimensionally, two methods are predominantly used: (1) discrete classes of pre-determined emotion and (2) continuous dimensional scales of arousal, valence and dominance. The video below demonstrates one such application on movie videos (Courtesy: <a href="https://sail.usc.edu/~malandra/files/papers/icassp2011.pdf">Malandrakis et. al., 2011</a>)</p>
+</blockquote>
+
+<iframe width="420" height="315" src="
+https://www.youtube.com/embed/qZBUzD5i1yI
+">
+</iframe>
+
+<blockquote>
+  <p><strong>Dataset explored by our work</strong><br />
+We participated in the Multimodal Affect Recognition Sub-Challenge (MASC) of AVEC 2016. The AVEC 2016 challenge uses the REmote COLlaborative and Affective interactions (<a href="https://diuf.unifr.ch/main/diva/recola/">RECOLA</a>) dataset for the Multimodal Affect Recognition Sub-Challenge (MASC). The RECOLA dataset consists of synchronized and continuous data from multiple modalities recorded during dyadic interactions in French on a video conference that requires completion of a collaborative task. It offers a good testbed for evaluating the tracking of arousal and valence using multimodal signals such as voice, facial expressions and physiological data in a relatively constrained setup.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Our approach</strong><br />
+We propose a continuous affective state tracking system based on linear dynamical models with Kalman filters. Our approach is inspired from the fact that arousal and valence are latent affective dimensions, thus making online state tracking systems such as Kalman filters a suitable choice. <br />
+We modify the Kalman filtering scheme to incorporate the multimodal nature of this problem by accounting for the presence or absence of input modalities using a conditional framework as illustrated below:</p>
+</blockquote>
+
+<p><img src="/assets/img/projects/varimodal.svg" alt="multimodal kalman" /></p>
+
+<blockquote>
+  <p><strong>Unimodal performance</strong><br />
+We used the <a href="https://en.wikipedia.org/wiki/Concordance_correlation_coefficient">concordance correlation coefficient</a> (<strong>CCC</strong>) as the evaluation metric used to compare submissions for the challenge task. The unimodal performance is summarixe below:</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Modality</th>
+      <th style="text-align: center">Arousal</th>
+      <th style="text-align: left">Valence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">Audio</td>
+      <td style="text-align: center">0.80</td>
+      <td style="text-align: left">0.45</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Video-appearance</td>
+      <td style="text-align: center">0.48</td>
+      <td style="text-align: left">0.47</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Video-geometric</td>
+      <td style="text-align: center">0.30</td>
+      <td style="text-align: left">0.61</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Electro-dermal activity</td>
+      <td style="text-align: center">0.08</td>
+      <td style="text-align: left">0.18</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">ECG</td>
+      <td style="text-align: center">0.27</td>
+      <td style="text-align: left">0.16</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Heart rater variability</td>
+      <td style="text-align: center">0.38</td>
+      <td style="text-align: left">0.29</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Multimodal performance</strong><br />
+We compared our CCC performance with that of the challenge baseline using three different configurations as described below. All metrics were estimated in a Leave-one-subject-out (LOSO) setting to obtain stable estimates of CCC.</p>
+  <ul>
+    <li><strong>System 1</strong>: Track arousal and valence separately using all modalities without a conditional framework to pick modalities.</li>
+    <li><strong>System 2</strong>: Track arousal first and use the predicted arousal as an additional observation to track valence using all modalities and no conditional framework.</li>
+    <li><strong>System 3</strong>: Track arousal first and use the predicted arousal to track valence with a conditional framework that decides which modality to pick depending on the available meta-data such as voicing probability to choose audio stream and presence of face to choose video stream.</li>
+  </ul>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Method</th>
+      <th style="text-align: center">Arousal</th>
+      <th style="text-align: left">Valence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right"><em>Development Set</em></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Challenge baseline</td>
+      <td style="text-align: center">0.79</td>
+      <td style="text-align: left">0.66</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">System 1</td>
+      <td style="text-align: center">0.78</td>
+      <td style="text-align: left">0.62</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">System 2</td>
+      <td style="text-align: center">0.78</td>
+      <td style="text-align: left">0.70</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">System 3</td>
+      <td style="text-align: center">0.82</td>
+      <td style="text-align: left">0.72</td>
+    </tr>
+    <tr>
+      <td style="text-align: right"><em>Test Set</em></td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Challenge baseline</td>
+      <td style="text-align: center">0.68</td>
+      <td style="text-align: left">0.64</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">System 3</td>
+      <td style="text-align: center">0.70</td>
+      <td style="text-align: left">0.68</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Highlights</strong></p>
+  <ul>
+    <li>We employ linear dynamical systems to model unimodal predictions from trained regressors to initially predict arousal and then use the predicted arousal as an additional observation for valence prediction in an online fashion using Kalman filters.</li>
+    <li>We propose a conditional framework to select from different multimodal Kalman filters while performing online tracking based on cues that incorporate observability of audiovisual data.</li>
+    <li>The proposed approach could be adopted for general behavioral coding and affective computing where different dimensions/classes are inter-correlated.</li>
+  </ul>
+</blockquote>
+:ET

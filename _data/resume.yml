@@ -1,0 +1,171 @@
+# If you have a `resume.json` file, copy it into `_data` and delete this file.
+# If you don't have a JSON Resume you can just edit this YAML file instead.
+# See also: <https://jsonresume.org/>.
+basics:
+  name: "Krishna Somandepalli"
+  label: "PhD Candidate, Electrical & Computer Engineering"
+  email: "somandep@usc.edu"
+  #phone: ""
+  website: "sail.usc.edu/~somandep"
+  summary: >
+    I build robust machine intelligence models by learning from multiple views and modalities in datasets. 
+    A few application areas of my research are understanding multimedia content, computational imaging, affective computing and developing inclusive technologies.  
+    I enjoy working on open-ended problems that contribute to products with a tangible societal impact.
+  location:
+    address: "Venice"
+    #postalCode: "CA 90291"
+    #city: "Los Angeles"
+    countryCode: "US"
+    region: "California"
+  profiles:
+   #- network: "LinkedIn"
+   #   username: "Krishna Somandepalli"
+   #   url: "https://www.linkedin.com/in/krishna-somandepalli-38827912/"
+    - network: "GitHub"
+      username: "Projects"
+      url: "https://github.com/usc-sail"
+work:
+  - company: "SAIL, Viterbi School of Engineering, USC"
+    position: "Research Assistant"
+    website: "https://sail.usc.edu"
+    startDate: "2015-08-20"
+    endDate: ""
+    #summary: >
+    #  <details><summary>What is SAIL?</summary>Founded in 2000 by Prof. Shri Narayanan, SAIL is a multidisciplinary research group working on a broad range of problems focused on human-centered machine learning. </details>
+    highlights:
+      - "Led research and collaboration of the Multimedia Intelligence and Content Analysis (MICA) group at SAIL with 10 PhD students"
+      - "Created three large-scale open-source datasets for computer vision and speech understanding of multimedia content"
+      - "Co-created a patent-pending application to analyze language and characters in screenplays and piloted the tool for over 25 film/TV scripts of 5 production companies including Disney and Universal"
+      - "Collaborated with Geena Davis Institute on the SeeJane project to computationally analyze over 600 movies  from 2014-2019"
+      - "Partnered with J Walter Thompson  to analyze portrayal of women in over 9000 ads nominated to  Cannes Lions from 2006-2017"
+      - "Co-developed an application for tracking female participation for the United Nations ITU conferences analyzing over 120 hours of meetings"
+  - company: "Google LLC."
+    position: "Research Intern"
+    website: "https://research.google/research-areas/machine-intelligence/"
+    startDate: "2020-05-21"
+    endDate: "2020-08-21"
+    highlights:
+      - "Demonstrated the use of federated learning (FL) for classifying 42 emotion labels at scale in a privacy-preserving manner"
+      - "Benchmarked emotion experience and perception federated models on a dataset of ~1500 users and ~3200 raters"
+      - "Proposed an algorithm to model raters and estimate their reliability in a distributed setting with a relative improvement of 3% average precision over the state-of-the-art"
+  - company: "Google LLC."
+    position: "Research Intern"
+    website: "https://research.google/research-areas/machine-intelligence/"
+    startDate: "2019-05-21"
+    endDate: "2019-08-21"
+    highlights:
+      - "Developed self-supervised methods to learn robust features of facial movements and audio from ~3M unlabeled videos"
+      - "Improved emotion classification system performance by a relative gain of 5% average precision using self-supervised features"
+  - company: "Google LLC."
+    position: "Research Software Intern"
+    website: "https://research.google/research-areas/machine-intelligence/"
+    startDate: "2018-05-21"
+    endDate: "2018-08-21"
+    highlights:
+      - "Designed a data collection framework to localize  cartoon characters in animated content"
+      - "Adopted computer vision models to detect, track & identify characters in video content and evaluated the system for seven animation genres"
+  - company: "NYU Langone Medical Center"
+    position: "Jr. Research Scientist"
+    website: "https://nyulangone.org/locations/child-study-center"
+    startDate: "2012-10-31"
+    endDate: "2015-08-05"
+    highlights:
+      - "Automated systems for quality control and denoising of functional MRI data reducing data attrition by ~12% over a 6 month period"
+      - "Contributed to 5+ journal publications in the field of computational neuroimaging"
+      - "Studied test-retest reliability of the fMRI connectome and replicability of the measures in a sample of 120 participants"
+#volunteer:
+#  - organization: "CoderDojo"
+#    position: "Teacher"
+#    website: "https://coderdojo.com/"
+#    startDate: "2012-01-01"
+#    endDate: "2013-01-01"
+#    summary: "Global movement of free coding clubs for young people."
+#    highlights:
+#      - "Awarded 'Teacher of the Month'"
+education:
+  - institution: "University of Southern California"
+    area: "Electrical & Computer Engineering"
+    studyType: "PhD"
+    startDate: "2015-08-21"
+    endDate: ""
+    #gpa: "4.0"
+    courses:
+      - "Advisor: Prof. Shri Narayanan"
+      - "Thesis: Learning Shared Subspaces across Multiple Views and Modalities"
+  - institution: "University of California at Santa Barbara"
+    area: "Electrical & Computer Engg"
+    studyType: "M.S."
+    startDate: "2011-08-21"
+    endDate: "2012-09-11"
+    #gpa: "4.0"
+    courses:
+      - "Advisor: Prof. Matthew Turk"
+  - institution: "University Visvesvaraya College of Engineering"
+    area: "Electronics & Communication Engg"
+    studyType: "B.E."
+    startDate: "2007-08-21"
+    endDate: "2011-06-11"
+    #gpa: "4.0"
+    courses:
+      - "Advisor: Prof. Deepa Shenoy"
+awards:
+  - title: "Global Symposium on Gender in Media, Los Angeles"
+    date: "2018-04-01"
+    talk: "Automating character representation and gender attribute analysis  in Hollywood movies; Attendees: 300"
+  - title: "Global Symposium on Gender in Media, New York"
+    date: "2017-09-01"
+    talk: "Understanding gender portrayals in movies using multimodal analysis; Attendees: 250"
+publications:
+  - name: "summary"
+    summary: "I have published in top peer-reviewed journals such as Transactions on Multimedia, Science Advances and conferences such as EMNLP and AAAI. For the full list of my publications, see here."
+skills:
+  - name: "Programming"
+    level: "Master"
+    keywords:
+      - "Python"
+      - "C++"
+      - "R"
+      - "TensorFlow"
+  - name: ""
+    level: "2/3"
+    keywords:
+      - "HTML"
+      - "Javascript"
+      - "Julia"
+      - "PyTorch"
+  - name: "Concepts"
+    level: "Master"
+    keywords:
+      - "Statistics"
+      - "Machine (Deep) Learning"
+      - "Data Analysis"
+      - "Optimization"
+  - name: "Soft skills"
+    level: "Master"
+    keywords:
+      - "Project leadership and management"
+      - "Critical thinking"
+      - "Communication"
+languages:
+  - language: "Peer-review "
+    fluency: "Reviewed 5+ journal articles and 10+ conference papers in machine learning/signal processing. Received an award for Outstanding contribution in revieweing from Elsevier"
+  - language: "Organizing "
+    fluency: "Organizer, Workshop on Media Analytics for Societal Trends : 2018-2020"
+interests:
+  - name: "Research Areas"
+    keywords:
+      - "Multiview / Multimodal signal representatiom learning"
+      - "Unsupervised / Self-supervised learning"
+      - "Explainability in Neural Networks"
+      - "Machine learning robustness and fairness"
+  - name: "Application domains"
+    keywords:
+      - "Computational Media Intelligence"
+      - "Computational Imaging"
+      - "Computational Social Sciences"
+      - "Building inclusive technologies"
+        #  - name: "Soft Skills"
+        #    keywords:
+        #      - "Project leadership and management"
+        #      - "Critical thinking"
+        #      - "Communication"

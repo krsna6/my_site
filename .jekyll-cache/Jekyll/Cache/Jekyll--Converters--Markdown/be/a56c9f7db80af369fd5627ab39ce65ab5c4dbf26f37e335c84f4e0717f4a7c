@@ -1,0 +1,86 @@
+I"Í<details><summary><b>
+What are character dictionaries for movies?
+</b></summary>
+Automatic movie or multimedia content analysis requires audio-video diarization (i.e., <b>"who"</b> appeared? and <b>"when"</b>). For video diarization in particular, where the characters that appear on screen are not known, a key step is to provide a list of characters that form the <b>who appeared</b> component of the system.
+We refer to such a list of characters specific to each movie <b>character dictionary</b>.
+</details>
+<p></p>
+
+<details><summary><b>
+Why is it hard to get character dictionaries for animation movies?
+</b></summary>
+Human face detection is the crux of character labeling methods for live action TV. Since human-characters can be uniquely identified by their faces, this method performs adequately well. 
+But, such methods developed for human faces do not work for the digital animation genre. Animated characters, though mostly anthropomorphic (having human characteristics) are not always human-like in appearance. They can be fictional animals, inanimate objects or abstract in design.
+</details>
+<p></p>
+
+<blockquote>
+  <p><strong>Our proposed system for animation movie character dictionaries:</strong><br />
+We propose an unsupervised approach which requires no prior information about the characters in a movie.</p>
+  <ul>
+    <li>First, we use a deep neural network based object detector that is trained on natural photographs to identify a set of initial character candidates.</li>
+    <li>Second, these candidates are further pruned using saliency constraints and object tracking.</li>
+    <li>A character dictionary per movie is then generated from exemplars obtained by clustering these candidates.<br />
+<img src="https://drive.google.com/uc?id=0B3ydbkt5jAUyLUUtc2hUWm5GdzQ" alt="animated" /></li>
+  </ul>
+</blockquote>
+
+<p class="figcaption">Schematic diagram of the proposed system for discovery of characters in animation movies</p>
+
+<p>We were able to identify both anthropomorphic and non-anthropomorphic characters in a dataset of forty-six animation movies with varying composition and character design.  <br />
+See a few results below:</p>
+<blockquote>
+  <p>(Click on the images to enlarge them)</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Cars 2 (2011)</th>
+      <th style="text-align: center">Free Birds (2014)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://drive.google.com/uc?id=0B3ydbkt5jAUyaklpLTRFYmh4M0U"><img src="https://drive.google.com/uc?id=0B3ydbkt5jAUycVZTc3FMbzg2RFU" alt="cars 2" title="Cars 2 (2011)" /></a></td>
+      <td style="text-align: center"><a href="https://drive.google.com/uc?id=0B3ydbkt5jAUyNHBMc2tHV2RsOVk"><img src="https://drive.google.com/uc?id=0B3ydbkt5jAUyNWNMNXJ3WjFGeVk" alt="free birds" title="Free Birds (2014)" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Frozen (2013)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://drive.google.com/uc?id=0B3ydbkt5jAUyWU5wSXFYTjB4Z1k"><img src="https://drive.google.com/uc?id=0B3ydbkt5jAUydEo0Vzk3MVUwZjg" alt="alt text" title="Frozen (2013)" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Evaluation of the proposed system on forty-six movies</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><img src="https://drive.google.com/uc?id=0B3ydbkt5jAUyQ1pJYjFseEhrT0k" alt="performance" title="Performance Evaluation" /></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sail-animation-movie-character-database-sail-amcd">SAIL Animation Movie Character Database (SAIL AMCD)</h3>
+
+<p><strong>Results from our system and movie casts used for evaluation</strong>  <br />
+Instructions to download the data:  <br />
+First, fill out this <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrqlSnjxoWJiCJ7NfwIkFPasFWI9My58Gns1ayc8R7VagL6A/viewform">Google form</a> with the required information to receive the password.  <br />
+Then, use the password to download the data at this <a href="https://128.125.20.152:5001/sharing/khXraiWim">link</a> for the outputs and annotations used in the system evaluation of the paper</p>
+
+<p>The database consists of the following directories <em>(Please see README for more details)</em>:  <br />
+<img src="https://drive.google.com/uc?id=0B3ydbkt5jAUyTnZ2R3p0a0dLd0k" alt="alt text" title="SAIL-AMCD download" /></p>
+:ET

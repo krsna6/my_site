@@ -1,0 +1,4 @@
+I"%<p>Hydejack offers a few additional features to markup your markdown.<br />
+Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,<br />
+so that your content remains compatible with other Jekyll themes.</p>
+:ET

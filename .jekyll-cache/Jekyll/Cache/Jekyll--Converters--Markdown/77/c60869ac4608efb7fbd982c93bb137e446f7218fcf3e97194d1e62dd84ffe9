@@ -1,0 +1,16 @@
+I"*<p>Real-time MRI can help understand human speech product processes. Automatic segmentation of articulators (e.g., tongue, lips) is vital for study of vocal tract dynamics in rtMRI.<br />
+The overall methodology and examples are shown below. For more details, see the <a href="http://sipi.usc.edu/~toutios/pdfs/somandepalli2017semantic.pdf">paper</a></p>
+
+<p>Inspired by semantic segmentation work, we propose a full convolutional encoder-decoder network to predict articulatory boundaries (colored lines shown on the MRI image in Fig. 2). The model performance was further improve by adding a penalty to the loss function to peanalize heavily when articulator pixels are confused with that of air vs. tissue. This helped reinforce the tissue boundary segmentation with a higher confidence.</p>
+
+<p><img src="/assets/img/projects/rtmri_all.png" alt="" /></p>
+
+<!-- **hy-drawer** is a touch-enabled drawer component for the modern web. It focuses on providing a fun, natural feel in both the Android and iOS stock browser, while being performant and easy to use. It is the perfect companion for mobile-first web pages and progressive web apps.
+
+> A touch-enabled drawer component for the modern web.
+{:.lead}
+
+**hy-drawer** is used by hundreds of sites as part of the [Hydejack] Jekyll theme.
+
+[hydejack]: ../README.md -->
+:ET
